@@ -6,6 +6,7 @@ Release:	3
 License:	distributable
 Group:		X11/Applications
 Source0:	ftp://crl.nmsu.edu/CLR/multiling/General/%{name}-%{version}.tar.gz
+# Source0-md5:	8420d39931a0674784f3fd0c0f1f9d6a
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-include.patch
