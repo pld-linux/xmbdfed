@@ -8,10 +8,10 @@ Group:		X11/Fonts
 Group(pl):	X11/Fonty
 Source0:	ftp://crl.nmsu.edu/CLR/multiling/General/%{name}-%{version}.tar.gz
 Source1:	xmbdfed.wmconfig
-BuildPrereq:	freetype-devel
-BuildPrereq:	XFree86-devel
-BuildPrereq:	xpm-devel
-BuildPrereq:	lesstif-devel
+BuildRequires:	freetype-devel
+BuildRequires:	XFree86-devel
+BuildRequires:	xpm-devel
+BuildRequires:	lesstif-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define _prefix	/usr/X11R6
