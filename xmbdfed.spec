@@ -98,11 +98,3 @@ rm -rf $RPM_BUILD_ROOT
 
 /etc/X11/wmconfig/%{name}
 %{_mandir}/man1/*
-
-%changelog
-* Thu May 20 1999 Piotr Czerwiñski <pius@pld.org.pl> 
-  [3.2-4]
-- package is FHS 2.0 compliant,
-- spec file written by Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>,
-  modified by me and Micha³ Kuratczyk <kura@pld.org.pl>,
-- pl translation by Arkadiusz Mi¶kiewicz <misiek@misiek.eu.org>.
