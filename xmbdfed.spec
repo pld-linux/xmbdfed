@@ -5,8 +5,6 @@ Version:	4.5
 Release:	1
 License:	distributable
 Group:		X11/Applications
-Group(de):	X11/Applikationen
-Group(pl):	X11/Aplikacje
 Source0:	ftp://crl.nmsu.edu/CLR/multiling/General/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Patch0:		%{name}-include.patch
