@@ -3,7 +3,7 @@ Summary(pl):	Edytor fontów bazuj±cych na Motifie BDF, Linuxowej konsoli (PSF, CP
 Name:		xmbdfed
 Version:	4.4
 Release:	5
-License:	Distributable
+License:	distributable
 Group:		X11/Applications
 Group(de):	X11/Applikationen
 Group(pl):	X11/Aplikacje
