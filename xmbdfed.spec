@@ -1,8 +1,10 @@
+# TODO: fix amd64 build and 64-bit pointer handling
+#
 Summary:	Motif-based BDF, Linux console (PSF, CP, and FNT) font editor
 Summary(pl):	Bazuj±cy na Motifie edytor fontów BDF, linuksowej konsoli (PSF, CP, i FNT)
 Name:		xmbdfed
 Version:	4.5
-Release:	4
+Release:	5
 License:	distributable
 Group:		X11/Applications
 Source0:	ftp://crl.nmsu.edu/CLR/multiling/General/%{name}-%{version}.tar.gz
@@ -14,7 +16,6 @@ BuildRequires:	XFree86-devel
 BuildRequires:	freetype1-devel
 BuildRequires:	motif-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 XmBDFEditor is a Motif-based BDF font editor with the following
@@ -87,11 +88,11 @@ ulepszeniami:
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1} \
-	$RPM_BUILD_ROOT{%{_applnkdir}/Graphics,%{_pixmapsdir}}
+	$RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
 install %{name} $RPM_BUILD_ROOT%{_bindir}
 install %{name}.man $RPM_BUILD_ROOT%{_mandir}/man1/%{name}.1
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Graphics
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
@@ -101,6 +102,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README COPYRIGHTS
 %attr(755,root,root) %{_bindir}/%{name}
-%{_applnkdir}/Graphics/xmbdfed.desktop
+%{_desktopdir}/xmbdfed.desktop
 %{_pixmapsdir}/*.png
 %{_mandir}/man1/*
