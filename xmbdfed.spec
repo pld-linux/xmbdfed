@@ -14,6 +14,8 @@ BuildPrereq:	xpm-devel
 BuildPrereq:	lesstif-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
+%define _prefix		/usr/X11R6
+
 %description
 XmBDFEditor is a Motif-based BDF font editor with the following features:
   o  Multiple fonts can be loaded from the command line.
@@ -74,14 +76,15 @@ make	HBFDEFS="-Dunix -DIN_MEMORY -DGUNZIP_CMD=\"/bin/gunzip -c\"" \
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/{etc/X11/wmconfig,usr/X11R6/{bin,share/man/man1}}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}} \
+	$RPM_BUILD_ROOT/etc/X11/wmconfig
 
-install -s xmbdfed $RPM_BUILD_ROOT/usr/X11R6/bin
-install xmbdfed.man $RPM_BUILD_ROOT/usr/X11R6/share/man/man1/xmbdfed.1
+install -s %{name} $RPM_BUILD_ROOT%{_bindir}
+install %{name}.man $RPM_BUILD_ROOT%{_mandir}/man1/%{name}.1
 
-install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/wmconfig/xmbdfed
+install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/wmconfig/%{name}
 
-gzip -9nf $RPM_BUILD_ROOT/usr/X11R6/share/man/man*/* \
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
 	README COPYRIGHTS
 
 %clean
@@ -90,10 +93,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc *.gz
-%attr(755,root,root) /usr/X11R6/bin/xmbdfed
+%attr(755,root,root) %{_bindir}/%{name}
 
-/etc/X11/wmconfig/xmbdfed
-/usr/X11R6/share/man/man1/xmbdfed.1.gz
+/etc/X11/wmconfig/%{name}
+%{_mandir}/man1/*
 
 %changelog
 * Thu May 13 1999 Piotr Czerwiñski <pius@pld.org.pl>
