@@ -1,8 +1,8 @@
 Summary:	Motif-based BDF, Linux console (PSF, CP, and FNT) font editor
 Summary(pl):	Edytor fontów bazuj±cych na Motifie BDF, Linuxowej konsoli (PSF, CP, i FNT)
 Name:		xmbdfed
-Version:	4.4
-Release:	5
+Version:	4.5
+Release:	1
 License:	distributable
 Group:		X11/Applications
 Group(de):	X11/Applikationen
@@ -83,7 +83,8 @@ ulepszeniami:
 	INCS="-I/usr/X11R6/include -I/usr/include/freetype" \
 	LIBS="-L/usr/X11R6/lib -lXm -lXpm -lXmu -lXt -lX11 -lSM -lICE -lttf" \
 	FTYPE_DEFS="-DHAVE_FREETYPE" \
-	CFLAGS="%{rpmcflags} -Wall"
+	CFLAGS="%{rpmcflags} -Wall" \
+	CC=%{__cc}
 
 %install
 rm -rf $RPM_BUILD_ROOT
