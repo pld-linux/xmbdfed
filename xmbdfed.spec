@@ -65,7 +65,7 @@ ulepszeniami:
   - Wbudowana pomoc.
   - Importowanie fontów PK/GF.
   - Importowanie fontów HBF (Han Bitmap Font).
-  - Importowanie Linuxowych fontów konsolowych (PSF, CP, i FNT).
+  - Importowanie Linuksowych fontów konsolowych (PSF, CP, i FNT).
   - Importowanie fontów konsolowych Suna (format vfont).
   - Importowanie fontów z X serwera.
   - Importowanie fontów Windows FON/FNT.
