@@ -76,7 +76,7 @@ make	HBFDEFS="-Dunix -DIN_MEMORY -DGUNZIP_CMD=\"/bin/gunzip -c\"" \
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}} \
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1} \
 	$RPM_BUILD_ROOT/etc/X11/wmconfig
 
 install -s %{name} $RPM_BUILD_ROOT%{_bindir}
