@@ -55,10 +55,10 @@ ulepszeniami:
   - Kilka edytorów glyph bitmap mo¿e byæ otwartych równocze¶nie.
   - Wycinanie i wklejanie pomiêdzy edytorami glyph bitmap.
   - Automatyczna korekcja miar podczas ³adowania fontu.
-  - Generacjia nazw XLFD dla fontów bez takich nazw.
+  - Generacja nazw XLFD dla fontów bez takich nazw.
   - Aktualizacja nazw fontów XLFD w w³a¶ciwo¶ciach fontu.
-  - Aktualizacjia w³a¶ciwo¶ci fontu na podstaiwe nazwy fontu XLFD.
-  - Edytor w³a¶ciwo¶ci fontur.
+  - Aktualizacja w³a¶ciwo¶ci fontu na podstawie nazwy fontu XLFD.
+  - Edytor w³a¶ciwo¶ci fontów.
   - Edytor komentarzy fontów.
   - Wsparcie dla niezakodowanych glyphsów (KODOWANIE z -1).
   - Wy¶wietlanie kodowania glyphów ósemkowo, decymalnie lub
