@@ -2,11 +2,12 @@ Summary:	Motif-based BDF, Linux console (PSF, CP, and FNT) font editor
 Summary(pl):	Edytor fontów bazuj±cych na Motifie BDF, Linuxowej konsoli (PSF, CP, i FNT)
 Name:		xmbdfed
 Version:	4.5
-Release:	2
+Release:	3
 License:	distributable
 Group:		X11/Applications
 Source0:	ftp://crl.nmsu.edu/CLR/multiling/General/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
+Source2:	%{name}.png
 Patch0:		%{name}-include.patch
 BuildRequires:	XFree86-devel
 BuildRequires:	freetype1-devel
@@ -87,21 +88,20 @@ ulepszeniami:
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1} \
-	$RPM_BUILD_ROOT%{_applnkdir}/Graphics
+	$RPM_BUILD_ROOT{%{_applnkdir}/Graphics,%{_pixmapsdir}}
 
 install %{name} $RPM_BUILD_ROOT%{_bindir}
 install %{name}.man $RPM_BUILD_ROOT%{_mandir}/man1/%{name}.1
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Graphics
-
-gzip -9nf README COPYRIGHTS
+install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README COPYRIGHTS
 %attr(755,root,root) %{_bindir}/%{name}
-
-%{_mandir}/man1/*
 %{_applnkdir}/Graphics/xmbdfed.desktop
+%{_pixmapsdir}/*.png
+%{_mandir}/man1/*
