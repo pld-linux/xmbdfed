@@ -1,14 +1,18 @@
-Summary:     Motif-based BDF, Linux console (PSF, CP, and FNT) font editor
-Summary(pl): Edytor fontów bazuj±cych na Motifie BDF, Linuxowej konsoli (PSF, CP, i FNT)
-Name:        xmbdfed
-Version:     3.2
-Release:     3
-Copyright:   1996, 1997 Computing Research Labs, New Mexico State University
-Group:       X11/Fonts
-Group(pl):   X11/Fonty
-Source0:     ftp://crl.nmsu.edu/CLR/multiling/General/%{name}-%{version}.tar.gz
-Source1:     %{name}.wmconfig
-BuildRoot:   /tmp/%{name}-%{version}-root
+Summary:	Motif-based BDF, Linux console (PSF, CP, and FNT) font editor
+Summary(pl):	Edytor fontów bazuj±cych na Motifie BDF, Linuxowej konsoli (PSF, CP, i FNT)
+Name:		xmbdfed
+Version:	3.2
+Release:	4
+Copyright:	1996, 1997 Computing Research Labs, New Mexico State University
+Group:		X11/Fonts
+Group(pl):	X11/Fonty
+Source0:	ftp://crl.nmsu.edu/CLR/multiling/General/%{name}-%{version}.tar.gz
+Source1:	xmbdfed.wmconfig
+BuildPrereq:	freetype-devel
+BuildPrereq:	XFree86-devel
+BuildPrereq:	xpm-devel
+BuildPrereq:	lesstif-devel
+BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
 XmBDFEditor is a Motif-based BDF font editor with the following features:
@@ -61,8 +65,6 @@ XmBDFEditor jest bazuj±cym na Motifie BDF edytorem fontów z ulepszeniami:
 %prep
 %setup -q
 
-rm -rf $RPM_BUILD_ROOT
-
 %build
 make	HBFDEFS="-Dunix -DIN_MEMORY -DGUNZIP_CMD=\"/bin/gunzip -c\"" \
 	INCS="-I/usr/X11R6/include" \
@@ -72,14 +74,14 @@ make	HBFDEFS="-Dunix -DIN_MEMORY -DGUNZIP_CMD=\"/bin/gunzip -c\"" \
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/{etc/X11/wmconfig,usr/X11R6/{bin,man/man1}}
+install -d $RPM_BUILD_ROOT/{etc/X11/wmconfig,usr/X11R6/{bin,share/man/man1}}
 
 install -s xmbdfed $RPM_BUILD_ROOT/usr/X11R6/bin
-install xmbdfed.man $RPM_BUILD_ROOT/usr/X11R6/man/man1/xmbdfed.1
+install xmbdfed.man $RPM_BUILD_ROOT/usr/X11R6/share/man/man1/xmbdfed.1
 
 install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/wmconfig/xmbdfed
 
-gzip -9nf $RPM_BUILD_ROOT/usr/X11R6/man/man*/* \
+gzip -9nf $RPM_BUILD_ROOT/usr/X11R6/share/man/man*/* \
 	README COPYRIGHTS
 
 %clean
@@ -88,11 +90,20 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc *.gz
-%config(missingok) /etc/X11/wmconfig/xmbdfed
-%attr(755,root, root) /usr/X11R6/bin/xmbdfed
-/usr/X11R6/man/man*/*
+%attr(755,root,root) /usr/X11R6/bin/xmbdfed
+
+/etc/X11/wmconfig/xmbdfed
+/usr/X11R6/share/man/man1/xmbdfed.1.gz
 
 %changelog
+* Thu May 13 1999 Piotr Czerwiñski <pius@pld.org.pl>
+  [3.2-4]
+- cosmetic changes for common l&f,
+- added some BuildPrereq rules,
+- removed %config from wmconfig file,
+- rebuild on rpm 3,
+- package is now FHS 2.0 compliant.
+
 * Mon Apr 12 1999 Micha³ Kuratczyk <kura@pld.org.pl>
   [3.2-3]
 - changed Group to X11/Fonts
