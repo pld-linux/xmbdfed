@@ -11,7 +11,7 @@ Source1:	xmbdfed.desktop
 BuildRequires:	freetype-devel
 BuildRequires:	XFree86-devel
 BuildRequires:	xpm-devel
-BuildRequires:	lesstif-devel
+BuildRequires:	motif-devel
 BuildRequires:	freetype-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
