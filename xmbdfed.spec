@@ -2,7 +2,7 @@ Summary:	Motif-based BDF, Linux console (PSF, CP, and FNT) font editor
 Summary(pl):	Edytor fontów bazuj±cych na Motifie BDF, Linuxowej konsoli (PSF, CP, i FNT)
 Name:		xmbdfed
 Version:	4.4
-Release:	4
+Release:	5
 License:	Distributable
 Group:		X11/Applications
 Group(de):	X11/Applikationen
@@ -92,7 +92,7 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1} \
 
 install %{name} $RPM_BUILD_ROOT%{_bindir}
 install %{name}.man $RPM_BUILD_ROOT%{_mandir}/man1/%{name}.1
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Development/Editors
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Graphics
 
 gzip -9nf README COPYRIGHTS
 
@@ -101,8 +101,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {README,COPYRIGHTS}.gz
+%doc *.gz
 %attr(755,root,root) %{_bindir}/%{name}
 
 %{_mandir}/man1/*
-%{_applnkdir}/Development/Editors/xmbdfed.desktop
+%{_applnkdir}/Graphics/xmbdfed.desktop
