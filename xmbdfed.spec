@@ -1,14 +1,14 @@
-Summary:   Motif-based BDF, Linux console (PSF, CP, and FNT) font editor
-Name:      xmbdfed
-Version:   3.2
-Release:   1
-Copyright: 1996, 1997 Computing Research Labs, New Mexico State University
-Group:     Development/X11
-Source0:   ftp://crl.nmsu.edu/CLR/multiling/General/%{name}-%{version}.tar.gz
-Source1:   %{name}.wmconfig
-BuildRoot: /tmp/%{name}-%{version}-root
+Summary:     Motif-based BDF, Linux console (PSF, CP, and FNT) font editor
+Summary(pl): Edytor fontów bazuj±cych na Motifie BDF, Linuxowej konsoli (PSF, CP, i FNT)
+Name:        xmbdfed
+Version:     3.2
+Release:     2
+Copyright:   1996, 1997 Computing Research Labs, New Mexico State University
+Group:       Development/X11
+Source0:     ftp://crl.nmsu.edu/CLR/multiling/General/%{name}-%{version}.tar.gz
+Source1:     %{name}.wmconfig
+BuildRoot:   /tmp/%{name}-%{version}-root
 %description
-
 XmBDFEditor is a Motif-based BDF font editor with the following features:
   o  Multiple fonts can be loaded from the command line.
   o  Multiple fonts can be open at the same time.
@@ -31,6 +31,30 @@ XmBDFEditor is a Motif-based BDF font editor with the following features:
   o  Imports fonts from the X server.
   o  Imports Windows FON/FNT fonts.
   o  Imports TrueType fonts and collections.
+
+%description -l pl
+XmBDFEditor jest bazuj±cym na Motifie BDF edytorem fontów z ulepszeniami:
+  o  Kilka fontów równocze¶nie mo¿e byæ za³adowanych z lini komend.
+  o  Kilka fontów mo¿e byæ otwartych równocze¶nie.
+  o  Wycinanie i wklejanie glyphsów pomiêdzy fontami.
+  o  Kilka edytorów glyph bitmap mo¿e byæ otwartych równocze¶nie.
+  o  Wycinanie i wklejanie pomiêdzy edytorami glyph bitmap.
+  o  Automatyczna korekcja miar podczas ³adowania fontu.
+  o  Generacjia nazw XLFD dla fontów bez takich nazw.
+  o  Aktualizacja nazw fontów XLFD w w³a¶ciwo¶ciach fontu.
+  o  Aktualizacjia w³a¶ciwo¶ci fontu na podstaiwe nazwy fontu XLFD.
+  o  Edytor w³a¶ciwo¶ci fontur.
+  o  Edytor komentarzy fontów.
+  o  Wsparcie dla niezakodowanych glyphsów (KODOWANIE z -1).
+  o  Wy¶wietlanie kodowania glyphów ósemkowo, decymalnie lub heksadecymalnie.
+  o  Wbudowana pomoc.
+  o  Importowanie fontów PK/GF.
+  o  Importowanie fontów HBF (Han Bitmap Font).
+  o  Importowanie Linuxowych fontów konsolowych (PSF, CP, i FNT).
+  o  Importowanie fontów konsolowych Suna (format vfont).
+  o  Importowanie fontów z X serwera.
+  o  Importowanie fontów Windows FON/FNT.
+  o  Importowanie fontów TrueType i ich kolekcji.
 
 %prep
 %setup -q
@@ -64,6 +88,10 @@ rm -rf $RPM_BUILD_ROOT
 %attr(644, root,  man) /usr/X11R6/man/man1/xmbdfed.1
 
 %changelog
+* Sat Sep 26 1998 Arkadiusz Mi¶kiewicz <misiek@misiek.eu.org>
+  [3.0-2]
+- added pl translation.
+
 * Wed May 20 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
   [3.0-1]
 - %%{version} macro instead %%{PACKAGE_VERSION},
