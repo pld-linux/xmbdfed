@@ -11,7 +11,6 @@ Source0:	ftp://crl.nmsu.edu/CLR/multiling/General/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 BuildRequires:	freetype-devel
 BuildRequires:	XFree86-devel
-BuildRequires:	xpm-devel
 BuildRequires:	motif-devel
 BuildRequires:	freetype-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
