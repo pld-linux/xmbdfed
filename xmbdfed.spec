@@ -47,7 +47,7 @@ features:
   - Edits two and four bits per pixel gray scale fonts.
 
 %description -l pl
-XmBDFEditor jest bazuj±cym na Motifie BDF edytorem fontów z
+XmBDFEditor jest bazuj±cym na Motifie edytorem fontów BDF z
 ulepszeniami:
   - Kilka fontów równocze¶nie mo¿e byæ za³adowanych z lini komend.
   - Kilka fontów mo¿e byæ otwartych równocze¶nie.
