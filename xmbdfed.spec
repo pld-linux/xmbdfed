@@ -2,12 +2,14 @@ Summary:     Motif-based BDF, Linux console (PSF, CP, and FNT) font editor
 Summary(pl): Edytor fontów bazuj±cych na Motifie BDF, Linuxowej konsoli (PSF, CP, i FNT)
 Name:        xmbdfed
 Version:     3.2
-Release:     2
+Release:     3
 Copyright:   1996, 1997 Computing Research Labs, New Mexico State University
-Group:       Development/X11
+Group:       X11/Fonts
+Group(pl):   X11/Fonty
 Source0:     ftp://crl.nmsu.edu/CLR/multiling/General/%{name}-%{version}.tar.gz
 Source1:     %{name}.wmconfig
 BuildRoot:   /tmp/%{name}-%{version}-root
+
 %description
 XmBDFEditor is a Motif-based BDF font editor with the following features:
   o  Multiple fonts can be loaded from the command line.
@@ -77,17 +79,26 @@ install xmbdfed.man $RPM_BUILD_ROOT/usr/X11R6/man/man1/xmbdfed.1
 
 install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/wmconfig/xmbdfed
 
+gzip -9nf $RPM_BUILD_ROOT/usr/X11R6/man/man*/* \
+	README COPYRIGHTS
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(644, root, root, 755)
-%doc README COPYRIGHTS
+%defattr(644,root,root,755)
+%doc *.gz
 %config(missingok) /etc/X11/wmconfig/xmbdfed
-%attr(755, root, root) /usr/X11R6/bin/xmbdfed
-%attr(644, root,  man) /usr/X11R6/man/man1/xmbdfed.1
+%attr(755,root, root) /usr/X11R6/bin/xmbdfed
+/usr/X11R6/man/man*/*
 
 %changelog
+* Mon Apr 12 1999 Micha³ Kuratczyk <kura@pld.org.pl>
+  [3.2-3]
+- changed Group to X11/Fonts
+- added Group(pl)
+- added gzipping documentation and man pages
+
 * Sat Sep 26 1998 Arkadiusz Mi¶kiewicz <misiek@misiek.eu.org>
   [3.0-2]
 - added pl translation.
@@ -101,7 +112,7 @@ rm -rf $RPM_BUILD_ROOT
 - added wmconfig registration file,
 - added -q %setup parameter,
 - added using %%{name} macro in Buildroot,
-- "rm -rf $RPM_BUILD_ROOT" added on staret %install,
+- "rm -rf $RPM_BUILD_ROOT" added on start %install,
 - added %clean section,
 - removed Packager field from spec (if you want recompile package and
   redistribute this package later put this in your private .rpmrc). 
