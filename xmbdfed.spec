@@ -1,7 +1,7 @@
 Summary:	Motif-based BDF, Linux console (PSF, CP, and FNT) font editor
 Summary(pl):	Edytor fontów bazuj±cych na Motifie BDF, Linuxowej konsoli (PSF, CP, i FNT)
 Name:		xmbdfed
-Version:	3.8
+Version:	4.3
 Release:	1
 Copyright:	1996, 1997 Computing Research Labs, New Mexico State University
 Group:		X11/Fonts
@@ -12,10 +12,12 @@ BuildRequires:	freetype-devel
 BuildRequires:	XFree86-devel
 BuildRequires:	xpm-devel
 BuildRequires:	lesstif-devel
+BuildRequires:	freetype-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define 	_prefix		/usr/X11R6
 %define 	_mandir 	%{_prefix}/man
+%define		_applnkdir	%{_datadir}/applnk
 
 %description
 XmBDFEditor is a Motif-based BDF font editor with the following features:
@@ -70,7 +72,7 @@ XmBDFEditor jest bazuj±cym na Motifie BDF edytorem fontów z ulepszeniami:
 
 %build
 make	HBFDEFS="-Dunix -DIN_MEMORY -DGUNZIP_CMD=\"/bin/gunzip -c\"" \
-	INCS="-I/usr/X11R6/include" \
+	INCS="-I/usr/X11R6/include -I/usr/include/freetype" \
 	LIBS="-L/usr/X11R6/lib -lXm -lXpm -lXmu -lXt -lX11 -lSM -lICE -lttf" \
 	FTYPE_DEFS="-DHAVE_FREETYPE" \
 	CFLAGS="$RPM_OPT_FLAGS -Wall"
@@ -78,11 +80,11 @@ make	HBFDEFS="-Dunix -DIN_MEMORY -DGUNZIP_CMD=\"/bin/gunzip -c\"" \
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1} \
-	$RPM_BUILD_ROOT/usr/X11R6/share/applnk/Editors
+	$RPM_BUILD_ROOT%{_applnkdir}/Editors
 
 install -s %{name}  $RPM_BUILD_ROOT%{_bindir}
 install %{name}.man $RPM_BUILD_ROOT%{_mandir}/man1/%{name}.1
-install %{SOURCE1}  $RPM_BUILD_ROOT/usr/X11R6/share/applnk/Editors
+install %{SOURCE1}  $RPM_BUILD_ROOT%{_applnkdir}/Editors
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
 	README COPYRIGHTS
@@ -96,4 +98,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/%{name}
 
 %{_mandir}/man1/*
-/usr/X11R6/share/applnk/Editors/xmbdfed.desktop
+%{_applnkdir}/Editors/xmbdfed.desktop
