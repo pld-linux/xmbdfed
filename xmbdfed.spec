@@ -1,7 +1,7 @@
 Summary:	Motif-based BDF, Linux console (PSF, CP, and FNT) font editor
 Summary(pl):	Edytor fontów bazuj±cych na Motifie BDF, Linuxowej konsoli (PSF, CP, i FNT)
 Name:		xmbdfed
-Version:	4.3
+Version:	4.4
 Release:	1
 Copyright:	1996, 1997 Computing Research Labs, New Mexico State University
 Group:		X11/Fonts
@@ -26,6 +26,7 @@ XmBDFEditor is a Motif-based BDF font editor with the following features:
   o  Cutting and pasting glyphs between fonts.
   o  Multiple glyph bitmap editors can be open at the same time.
   o  Cutting and pasting between glyph bitmap editors.
+  o  Export of XBM files from glyph bitmap editors.
   o  Automatic correction of certain metrics when a font is loaded.
   o  Generation of XLFD font names for fonts without XLFD names.
   o  Update an XLFD font name from the font properties.
@@ -42,6 +43,9 @@ XmBDFEditor is a Motif-based BDF font editor with the following features:
   o  Imports fonts from the X server.
   o  Imports Windows FON/FNT fonts.
   o  Imports TrueType fonts and collections.
+  o  Exports PSF fonts.
+  o  Exports HEX fonts.
+  o  Edits two and four bits per pixel gray scale fonts.
 
 %description -l pl
 XmBDFEditor jest bazuj±cym na Motifie BDF edytorem fontów z ulepszeniami:
