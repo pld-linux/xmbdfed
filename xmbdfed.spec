@@ -13,11 +13,10 @@ BuildRequires:	XFree86-devel
 BuildRequires:	xpm-devel
 BuildRequires:	lesstif-devel
 BuildRequires:	freetype-devel
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define 	_prefix		/usr/X11R6
 %define 	_mandir 	%{_prefix}/man
-%define		_applnkdir	%{_datadir}/applnk
 
 %description
 XmBDFEditor is a Motif-based BDF font editor with the following features:
