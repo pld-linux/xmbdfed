@@ -81,7 +81,7 @@ make	HBFDEFS="-Dunix -DIN_MEMORY -DGUNZIP_CMD=\"/bin/gunzip -c\"" \
 	INCS="-I/usr/X11R6/include -I/usr/include/freetype" \
 	LIBS="-L/usr/X11R6/lib -lXm -lXpm -lXmu -lXt -lX11 -lSM -lICE -lttf" \
 	FTYPE_DEFS="-DHAVE_FREETYPE" \
-	CFLAGS="%{!?debug:$RPM_OPT_FLAGS}%{?debug:-O -g} -Wall"
+	CFLAGS="%{?debug:-O -g}%{!?debug:$RPM_OPT_FLAGS} -Wall"
 
 %install
 rm -rf $RPM_BUILD_ROOT
