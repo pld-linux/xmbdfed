@@ -9,6 +9,7 @@ Group(de):	X11/Applikationen
 Group(pl):	X11/Aplikacje
 Source0:	ftp://crl.nmsu.edu/CLR/multiling/General/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
+Patch0:		%{name}-include.patch
 BuildRequires:	XFree86-devel
 BuildRequires:	freetype1-devel
 BuildRequires:	motif-devel
@@ -74,9 +75,11 @@ ulepszeniami:
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
-make	HBFDEFS="-Dunix -DIN_MEMORY -DGUNZIP_CMD=\"/bin/gunzip -c\"" \
+%{__make} \
+	HBFDEFS="-Dunix -DIN_MEMORY -DGUNZIP_CMD=\"/bin/gunzip -c\"" \
 	INCS="-I/usr/X11R6/include -I/usr/include/freetype" \
 	LIBS="-L/usr/X11R6/lib -lXm -lXpm -lXmu -lXt -lX11 -lSM -lICE -lttf" \
 	FTYPE_DEFS="-DHAVE_FREETYPE" \
