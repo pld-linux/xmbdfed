@@ -1,0 +1,12 @@
+diff -urN xmbdfed-4.4/bdf.h xmbdfed-4.4.new/bdf.h
+--- xmbdfed-4.4/bdf.h	Thu Mar 16 21:08:51 2000
++++ xmbdfed-4.4.new/bdf.h	Wed Sep  5 21:52:21 2001
+@@ -41,7 +41,7 @@
+ 
+ #ifdef HAVE_FREETYPE
+ #include <freetype.h>
+-#include <extend/ftxsbit.h>
++#include <ftxsbit.h>
+ #endif /* HAVE_FREETYPE */
+ 
+ #ifdef __cplusplus
