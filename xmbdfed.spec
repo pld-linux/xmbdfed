@@ -20,57 +20,57 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 XmBDFEditor is a Motif-based BDF font editor with the following
 features:
-  - Multiple fonts can be loaded from the command line.
-  - Multiple fonts can be open at the same time.
-  - Cutting and pasting glyphs between fonts.
-  - Multiple glyph bitmap editors can be open at the same time.
-  - Cutting and pasting between glyph bitmap editors.
-  - Export of XBM files from glyph bitmap editors.
-  - Automatic correction of certain metrics when a font is loaded.
-  - Generation of XLFD font names for fonts without XLFD names.
-  - Update an XLFD font name from the font properties.
-  - Update the font properties from an XLFD font name.
-  - Font property editor.
-  - Font comment editor.
-  - Supports unencoded glyphs (ENCODING of -1).
-  - Display of glyph encodings in octal, decimal, or hex.
-  - Builtin on-line help.
-  - Imports PK/GF fonts.
-  - Imports HBF (Han Bitmap Font) fonts.
-  - Imports Linux console fonts (PSF, CP, and FNT).
-  - Imports Sun console fonts (vfont format).
-  - Imports fonts from the X server.
-  - Imports Windows FON/FNT fonts.
-  - Imports TrueType fonts and collections.
-  - Exports PSF fonts.
-  - Exports HEX fonts.
-  - Edits two and four bits per pixel gray scale fonts.
+- Multiple fonts can be loaded from the command line.
+- Multiple fonts can be open at the same time.
+- Cutting and pasting glyphs between fonts.
+- Multiple glyph bitmap editors can be open at the same time.
+- Cutting and pasting between glyph bitmap editors.
+- Export of XBM files from glyph bitmap editors.
+- Automatic correction of certain metrics when a font is loaded.
+- Generation of XLFD font names for fonts without XLFD names.
+- Update an XLFD font name from the font properties.
+- Update the font properties from an XLFD font name.
+- Font property editor.
+- Font comment editor.
+- Supports unencoded glyphs (ENCODING of -1).
+- Display of glyph encodings in octal, decimal, or hex.
+- Builtin on-line help.
+- Imports PK/GF fonts.
+- Imports HBF (Han Bitmap Font) fonts.
+- Imports Linux console fonts (PSF, CP, and FNT).
+- Imports Sun console fonts (vfont format).
+- Imports fonts from the X server.
+- Imports Windows FON/FNT fonts.
+- Imports TrueType fonts and collections.
+- Exports PSF fonts.
+- Exports HEX fonts.
+- Edits two and four bits per pixel gray scale fonts.
 
 %description -l pl
 XmBDFEditor jest bazuj±cym na Motifie edytorem fontów BDF z
 ulepszeniami:
-  - Kilka fontów równocze¶nie mo¿e byæ za³adowanych z linii komend.
-  - Kilka fontów mo¿e byæ otwartych równocze¶nie.
-  - Wycinanie i wklejanie glyphsów pomiêdzy fontami.
-  - Kilka edytorów glyph bitmap mo¿e byæ otwartych równocze¶nie.
-  - Wycinanie i wklejanie pomiêdzy edytorami glyph bitmap.
-  - Automatyczna korekcja miar podczas ³adowania fontu.
-  - Generacja nazw XLFD dla fontów bez takich nazw.
-  - Aktualizacja nazw fontów XLFD w w³a¶ciwo¶ciach fontu.
-  - Aktualizacja w³a¶ciwo¶ci fontu na podstawie nazwy fontu XLFD.
-  - Edytor w³a¶ciwo¶ci fontów.
-  - Edytor komentarzy fontów.
-  - Wsparcie dla niezakodowanych glyphsów (KODOWANIE z -1).
-  - Wy¶wietlanie kodowania glyphów ósemkowo, decymalnie lub
-    heksadecymalnie.
-  - Wbudowana pomoc.
-  - Importowanie fontów PK/GF.
-  - Importowanie fontów HBF (Han Bitmap Font).
-  - Importowanie linuksowych fontów konsolowych (PSF, CP, i FNT).
-  - Importowanie fontów konsolowych Suna (format vfont).
-  - Importowanie fontów z X serwera.
-  - Importowanie fontów Windows FON/FNT.
-  - Importowanie fontów TrueType i ich kolekcji.
+- Kilka fontów równocze¶nie mo¿e byæ za³adowanych z linii komend.
+- Kilka fontów mo¿e byæ otwartych równocze¶nie.
+- Wycinanie i wklejanie glyphsów pomiêdzy fontami.
+- Kilka edytorów glyph bitmap mo¿e byæ otwartych równocze¶nie.
+- Wycinanie i wklejanie pomiêdzy edytorami glyph bitmap.
+- Automatyczna korekcja miar podczas ³adowania fontu.
+- Generacja nazw XLFD dla fontów bez takich nazw.
+- Aktualizacja nazw fontów XLFD w w³a¶ciwo¶ciach fontu.
+- Aktualizacja w³a¶ciwo¶ci fontu na podstawie nazwy fontu XLFD.
+- Edytor w³a¶ciwo¶ci fontów.
+- Edytor komentarzy fontów.
+- Wsparcie dla niezakodowanych glyphsów (KODOWANIE z -1).
+- Wy¶wietlanie kodowania glyphów ósemkowo, decymalnie lub
+  heksadecymalnie.
+- Wbudowana pomoc.
+- Importowanie fontów PK/GF.
+- Importowanie fontów HBF (Han Bitmap Font).
+- Importowanie linuksowych fontów konsolowych (PSF, CP, i FNT).
+- Importowanie fontów konsolowych Suna (format vfont).
+- Importowanie fontów z X serwera.
+- Importowanie fontów Windows FON/FNT.
+- Importowanie fontów TrueType i ich kolekcji.
 
 %prep
 %setup -q
