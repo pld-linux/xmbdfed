@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Xmbdfed
-Comment=Font Editor
-Comment[pl]=Edytor fontów
+Comment=Motif-based BDF, Linux console (PSF, CP, and FNT) font editor
+Comment[pl]=Edytor fontów bBDF i Linuxowej konsoli (PSF, CP, i FNT)
 Exec=xmbdfed
 Terminal=0
 Type=Application
