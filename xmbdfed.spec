@@ -15,6 +15,7 @@ BuildPrereq:	lesstif-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define _prefix	/usr/X11R6
+%define _mandir %{_prefix}/man
 
 %description
 XmBDFEditor is a Motif-based BDF font editor with the following features:
