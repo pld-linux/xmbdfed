@@ -14,7 +14,7 @@ BuildPrereq:	xpm-devel
 BuildPrereq:	lesstif-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
-%define _prefix		/usr/X11R6
+%define _prefix	/usr/X11R6
 
 %description
 XmBDFEditor is a Motif-based BDF font editor with the following features:
@@ -92,63 +92,16 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc {README,COPYRIGHTS}.gz
 %attr(755,root,root) %{_bindir}/%{name}
 
 /etc/X11/wmconfig/%{name}
 %{_mandir}/man1/*
 
 %changelog
-* Thu May 13 1999 Piotr Czerwiñski <pius@pld.org.pl>
+* Thu May 20 1999 Piotr Czerwiñski <pius@pld.org.pl> 
   [3.2-4]
-- cosmetic changes for common l&f,
-- added some BuildPrereq rules,
-- removed %config from wmconfig file,
-- rebuild on rpm 3,
-- package is now FHS 2.0 compliant.
-
-* Mon Apr 12 1999 Micha³ Kuratczyk <kura@pld.org.pl>
-  [3.2-3]
-- changed Group to X11/Fonts
-- added Group(pl)
-- added gzipping documentation and man pages
-
-* Sat Sep 26 1998 Arkadiusz Mi¶kiewicz <misiek@misiek.eu.org>
-  [3.0-2]
-- added pl translation.
-
-* Wed May 20 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [3.0-1]
-- %%{version} macro instead %%{PACKAGE_VERSION},
-- added support for Imports TrueType fonts,
-- removed patching Makefile (now all is passed as make parameters),
-- added using $RPM_OPT_FLAGS during compilation,
-- added wmconfig registration file,
-- added -q %setup parameter,
-- added using %%{name} macro in Buildroot,
-- "rm -rf $RPM_BUILD_ROOT" added on start %install,
-- added %clean section,
-- removed Packager field from spec (if you want recompile package and
-  redistribute this package later put this in your private .rpmrc). 
-- added %defattr and %attr macros in %files (allows building package from
-  non-root account). This require on rebuild rpm >= 2.4.99 but recomended is
-  rpm >= 2.5.
-
-* Fri Sep 26 1997 Tomasz K³oczko <kloczek@idk.ocm.pl>
-  [2.3-1]
-- changer %description,
-
-* Mon Sep 15 1997 Tomasz K³oczko <kloczek@idk.ocm.pl>
-  [2.2-2]
-- chenged %attr in %doc to (-, root, root),
-
-* Wed Jul 23 1997 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [2.2-1]
-- added %%{PACKAGE_VERSION} macro in Source,
-- anned %attr macro to %doc files,
-- changed permision on man page (644,root,root) -> (644, root, man),
-- added "rm -rf $RPM_BUILD_ROOT" in %prep.
-
-* Wed May 21 1997 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [2.1-1]
-- first release in rpm package.
+- package is FHS 2.0 compliant,
+- spec file written by Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>,
+  modified by me and Micha³ Kuratczyk <kura@pld.org.pl>,
+- pl translation by Arkadiusz Mi¶kiewicz <misiek@misiek.eu.org>.
