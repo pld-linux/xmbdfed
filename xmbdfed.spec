@@ -83,7 +83,7 @@ ulepszeniami:
 	LIBS="-L/usr/X11R6/%{_lib} -lXm -lXpm -lXmu -lXt -lX11 -lSM -lICE -lttf" \
 	FTYPE_DEFS="-DHAVE_FREETYPE" \
 	CFLAGS="%{rpmcflags} -Wall" \
-	CC=%{__cc}
+	CC="%{__cc}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
