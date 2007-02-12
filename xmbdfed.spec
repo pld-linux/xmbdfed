@@ -1,7 +1,7 @@
 # TODO: fix amd64 build and 64-bit pointer handling
 #
 Summary:	Motif-based BDF, Linux console (PSF, CP, and FNT) font editor
-Summary(pl):	Bazuj±cy na Motifie edytor fontÛw BDF, linuksowej konsoli (PSF, CP, i FNT)
+Summary(pl.UTF-8):   BazujƒÖcy na Motifie edytor font√≥w BDF, linuksowej konsoli (PSF, CP, i FNT)
 Name:		xmbdfed
 Version:	4.5
 Release:	5
@@ -46,31 +46,31 @@ features:
 - Exports HEX fonts.
 - Edits two and four bits per pixel gray scale fonts.
 
-%description -l pl
-XmBDFEditor jest bazuj±cym na Motifie edytorem fontÛw BDF z
+%description -l pl.UTF-8
+XmBDFEditor jest bazujƒÖcym na Motifie edytorem font√≥w BDF z
 ulepszeniami:
-- Kilka fontÛw rÛwnocze∂nie moøe byÊ za≥adowanych z linii komend.
-- Kilka fontÛw moøe byÊ otwartych rÛwnocze∂nie.
-- Wycinanie i wklejanie glyphsÛw pomiÍdzy fontami.
-- Kilka edytorÛw glyph bitmap moøe byÊ otwartych rÛwnocze∂nie.
-- Wycinanie i wklejanie pomiÍdzy edytorami glyph bitmap.
-- Automatyczna korekcja miar podczas ≥adowania fontu.
-- Generacja nazw XLFD dla fontÛw bez takich nazw.
-- Aktualizacja nazw fontÛw XLFD w w≥a∂ciwo∂ciach fontu.
-- Aktualizacja w≥a∂ciwo∂ci fontu na podstawie nazwy fontu XLFD.
-- Edytor w≥a∂ciwo∂ci fontÛw.
-- Edytor komentarzy fontÛw.
-- Wsparcie dla niezakodowanych glyphsÛw (KODOWANIE z -1).
-- Wy∂wietlanie kodowania glyphÛw Ûsemkowo, decymalnie lub
+- Kilka font√≥w r√≥wnocze≈õnie mo≈ºe byƒá za≈Çadowanych z linii komend.
+- Kilka font√≥w mo≈ºe byƒá otwartych r√≥wnocze≈õnie.
+- Wycinanie i wklejanie glyphs√≥w pomiƒôdzy fontami.
+- Kilka edytor√≥w glyph bitmap mo≈ºe byƒá otwartych r√≥wnocze≈õnie.
+- Wycinanie i wklejanie pomiƒôdzy edytorami glyph bitmap.
+- Automatyczna korekcja miar podczas ≈Çadowania fontu.
+- Generacja nazw XLFD dla font√≥w bez takich nazw.
+- Aktualizacja nazw font√≥w XLFD w w≈Ça≈õciwo≈õciach fontu.
+- Aktualizacja w≈Ça≈õciwo≈õci fontu na podstawie nazwy fontu XLFD.
+- Edytor w≈Ça≈õciwo≈õci font√≥w.
+- Edytor komentarzy font√≥w.
+- Wsparcie dla niezakodowanych glyphs√≥w (KODOWANIE z -1).
+- Wy≈õwietlanie kodowania glyph√≥w √≥semkowo, decymalnie lub
   heksadecymalnie.
 - Wbudowana pomoc.
-- Importowanie fontÛw PK/GF.
-- Importowanie fontÛw HBF (Han Bitmap Font).
-- Importowanie linuksowych fontÛw konsolowych (PSF, CP, i FNT).
-- Importowanie fontÛw konsolowych Suna (format vfont).
-- Importowanie fontÛw z X serwera.
-- Importowanie fontÛw Windows FON/FNT.
-- Importowanie fontÛw TrueType i ich kolekcji.
+- Importowanie font√≥w PK/GF.
+- Importowanie font√≥w HBF (Han Bitmap Font).
+- Importowanie linuksowych font√≥w konsolowych (PSF, CP, i FNT).
+- Importowanie font√≥w konsolowych Suna (format vfont).
+- Importowanie font√≥w z X serwera.
+- Importowanie font√≥w Windows FON/FNT.
+- Importowanie font√≥w TrueType i ich kolekcji.
 
 %prep
 %setup -q
