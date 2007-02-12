@@ -1,7 +1,7 @@
 # TODO: fix amd64 build and 64-bit pointer handling
 #
 Summary:	Motif-based BDF, Linux console (PSF, CP, and FNT) font editor
-Summary(pl.UTF-8):   Bazujący na Motifie edytor fontów BDF, linuksowej konsoli (PSF, CP, i FNT)
+Summary(pl.UTF-8):	Bazujący na Motifie edytor fontów BDF, linuksowej konsoli (PSF, CP, i FNT)
 Name:		xmbdfed
 Version:	4.5
 Release:	5
